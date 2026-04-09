@@ -2,6 +2,8 @@
 
 This is the repository supporting the weekly livestream on the [Ned in the Cloud YouTube channel](https://www.youtube.com/@NedintheCloud) covering the objectives of the Terraform Pro exam.
 
+![TF Pro Thumbnail](.\TerraformProExamPrep.png)
+
 Each livestream will include an agenda and link to the livestream.
 
 ## Table of Contents
