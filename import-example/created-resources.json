@@ -1,0 +1,7 @@
+﻿{
+    "resourceGroupName":  "tf-pro-import-rg-260416112642-737",
+    "resourceGroupId":  "/subscriptions/1e939538-cffa-4fb8-b54d-a482237b2c40/resourceGroups/tf-pro-import-rg-260416112642-737",
+    "storageAccountName":  "tfproimpo260416112642737",
+    "storageAccountId":  "/subscriptions/1e939538-cffa-4fb8-b54d-a482237b2c40/resourceGroups/tf-pro-import-rg-260416112642-737/providers/Microsoft.Storage/storageAccounts/tfproimpo260416112642737",
+    "location":  "eastus"
+}
