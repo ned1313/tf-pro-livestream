@@ -9,9 +9,10 @@ Each livestream will include an agenda and link to the livestream.
 ## Table of Contents
 
 | Session | Summary |
-|---------|---------|
+| --------- | --------- |
 | [2026-04-02 Notes](#2026-04-02-notes) | Kick-off stream covering terraform init, workspaces, and the exam format |
-| [2026-04-02 Notes](#2026-04-02-notes-1) | Deep dive into terraform plan, apply, and destroy commands |
+| [2026-04-09 Notes](#2026-04-09-notes) | Deep dive into terraform plan, apply, and destroy commands |
+| [2026-04-16 Notes](#2026-04-16-notes) | Covering moved, import, and drift detection |
 
 ## 2026-04-02 Notes
 
@@ -55,7 +56,7 @@ Each livestream will include an agenda and link to the livestream.
 * Discussed the exam format, when Azure version is coming, and questions about the exam environment
 * Built an example configuration in init-example to demonstrate various init options
 
-## 2026-04-02 Notes
+## 2026-04-09 Notes
 
 [Second stream](https://www.youtube.com/live/Epi3X0riDm4)
 
@@ -98,3 +99,78 @@ The `plan-example` configuration was used to demonstrate the various plan and ap
 We also learned that `terraform plan` checks for variable values BEFORE running a validate.
 
 And we learned that Windows doesn't love using just `tfplan` for a plan file name. I blame Copilot.
+
+## 2026-04-16 Notes
+
+[Third stream](https://www.youtube.com/live/9rK0lEeNxAo)
+
+### Agenda
+
+* Introduce topics for today
+ Topic 1E - Manage resource state, including importing resources and reconciling resource drift
+* State basics
+  * State storage
+  * State commands and interaction
+  * Resource operations
+    * Create, update, recreate, destroy, move, remove, import
+  * Moving resources
+  * Importing resources
+  * Detecting drift
+    * Config drift
+    * State drift
+
+### What We Covered
+
+We covered the contents of the `drift-example`, `moved-example`, and `import-example` directories.
+
+We also learned the moved and import blocks don't always play nice with each other!
+
+## 2026-04-23 Notes
+
+[Fourth stream](https://www.youtube.com/live/0lmSUURaolM)
+
+### Agenda
+
+* Start with what the livestream is meant to cover
+  * We are here to discuss and study topics related to the Terraform Authoring and Operations Professional exam
+* Ground rules and community notes
+  * I cannot tell you exactly what is on the exam
+  * I cannot discuss actual exam questions or scenarios
+  * Community rules from HUGs are in effect (don't be an asshat)
+  * Feel free to ask questions at any time!
+  * I have some prepared examples, but we can also build things on the fly together
+* [Review the exam objectives](https://developer.hashicorp.com/terraform/tutorials/pro-cert/pro-review)
+  * Six objectives
+* Introduce topics for today
+  * Topic 2A - Use language features to validate configuration
+  * There are five documentation links for this objectives and that's going to be a lot to cover!
+* Validating your configuration
+  * Basic validation - `terraform fmt` and `terraform validate`
+  * Input validation: `type` and `validation` blocks
+  * Custom Conditions: `precondition` and `postcondition` blocks
+  * Checks: `check` blocks and their purpose
+* Testing is probably going to be its own episode cause holy cow!
+
+### Validation List
+
+Built-in tools:
+
+- terraform fmt
+- terraform validate
+
+Variable validation:
+
+- type: uses the `type` argument
+- value: `validation` blocks
+
+Custom validation:
+
+- assumptions: something that must be true before evaluation - `precondition`
+- guarantees: something that must be true after evaluation - `postcondition`
+
+If they fail, the process stops
+
+Check block
+
+- checking for drift
+- verifying health
