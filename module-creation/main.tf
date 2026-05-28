@@ -19,9 +19,8 @@ module "taco_app_vpc" {
   tags = var.common_tags
 }
 
-/*
 module "web" {
-  source = "./modules/ec2-instance"
+  source = "./completed_module/ec2-instance"
 
   instance_name       = "web-01"
   instance_size       = "M"
@@ -29,4 +28,3 @@ module "web" {
   listening_port      = [80, 443]
   security_group_name = "web-01-sg"   # creates a new SG
 }
-*/
