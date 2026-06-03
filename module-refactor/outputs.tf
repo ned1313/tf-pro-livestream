@@ -1,6 +1,6 @@
 output "vpc_id" {
   description = "ID of the VPC."
-  value       = aws_vpc.this.id
+  value       = module.vpc.vpc_id
 }
 
 output "bucket_name" {
